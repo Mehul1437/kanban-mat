@@ -100,85 +100,10 @@ npm start
 
 ---
 
-## 🌐 Deployment Guide
+## Live Application
 
-### 1. MongoDB Atlas Setup
-1. Create a free account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-2. Create a new cluster (free tier is sufficient)
-3. Set up database access:
-   - Create a database user with read/write permissions
-   - Add your IP address to the IP whitelist (or use 0.0.0.0/0 for all IPs)
-4. Get your connection string from "Connect" > "Connect your application"
-   - Replace `<password>` with your database user's password
-   - Replace `<dbname>` with your database name (e.g., `kanban-mat`)
-
-### 2. Backend Deployment (Render)
-1. Create a free account at [Render](https://render.com)
-2. Create a new Web Service:
-   - Connect your GitHub repository
-   - Select the `backend` directory
-   - Set the following:
-     - **Build Command:** `npm install`
-     - **Start Command:** `npm start`
-     - **Environment Variables:**
-       ```
-       MONGO_URI=your_mongodb_atlas_connection_string
-       JWT_SECRET=your_jwt_secret_key
-       PORT=5000
-       ```
-3. Deploy the service
-4. Note the deployed URL (e.g., `https://your-app.onrender.com`)
-
-### 3. Frontend Deployment (Netlify/Vercel)
-
-#### Option A: Netlify
-1. Create a free account at [Netlify](https://netlify.com)
-2. Create a new site from Git:
-   - Connect your GitHub repository
-   - Select the `frontend` directory
-   - Set the following:
-     - **Build Command:** `npm install && npm run build`
-     - **Publish Directory:** `build`
-3. Add environment variables:
-   ```
-   REACT_APP_API_URL=your_backend_url
-   ```
-4. Deploy the site
-
-#### Option B: Vercel
-1. Create a free account at [Vercel](https://vercel.com)
-2. Import your GitHub repository:
-   - Select the `frontend` directory
-   - Set the following:
-     - **Framework Preset:** Create React App
-     - **Build Command:** `npm run build`
-3. Add environment variables:
-   ```
-   REACT_APP_API_URL=your_backend_url
-   ```
-4. Deploy the site
-
-### 4. Post-Deployment
-1. Update CORS settings in your backend:
-   - Add your frontend domain to the allowed origins
-2. Test the following functionality:
-   - User registration/login
-   - Project creation
-   - Real-time updates
-   - File uploads
-   - Notifications
-
-### 5. Monitoring & Maintenance
-- Monitor your MongoDB Atlas cluster usage
-- Set up alerts for Render/Netlify/Vercel
-- Regularly backup your database
-- Keep dependencies updated
-
----
-
-## 📸 Screenshots
-
-> Add screenshots/gifs of the Kanban board, dark mode, real-time updates, etc.
+- Frontend: [https://kanban-mat.vercel.app](https://kanban-mat.vercel.app)
+- Backend API: [https://kanban-mat.onrender.com](https://kanban-mat.onrender.com)
 
 ---
 
