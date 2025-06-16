@@ -50,7 +50,7 @@ A Trello-like productivity app for teams, featuring real-time collaboration, rol
 ## 🗂️ Project Structure
 
 ```
-smart-taskmate/
+kanban-mat/
   backend/
     models/
     routes/
@@ -110,7 +110,7 @@ npm start
    - Add your IP address to the IP whitelist (or use 0.0.0.0/0 for all IPs)
 4. Get your connection string from "Connect" > "Connect your application"
    - Replace `<password>` with your database user's password
-   - Replace `<dbname>` with your database name (e.g., `smart-taskmate`)
+   - Replace `<dbname>` with your database name (e.g., `kanban-mat`)
 
 ### 2. Backend Deployment (Render)
 1. Create a free account at [Render](https://render.com)
